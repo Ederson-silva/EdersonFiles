@@ -1,0 +1,88 @@
+<!--
+  Generated template for the TesesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Revistas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Conteúdo ----------------------- -->
+  <!-- Aqui usamos o HTML da documentação do Ionic -->
+
+  <ion-item>
+    <ion-label floating>Nome do Autor</ion-label>
+    <ion-input type="text" [(ngModel)]="referencia.nomeAutor" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Sobrenome do Autor</ion-label>
+    <ion-input type="text" [(ngModel)]="referencia.sobrenome" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>Título do Artigo</ion-label>
+    <ion-input type="text" [(ngModel)]="referencia.tituloArtigo" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>Titulo da Revista</ion-label>
+    <ion-input type="text" [(ngModel)]="referencia.tituloRevista" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>Cidade</ion-label>
+    <ion-input type="text" [(ngModel)]="referencia.cidade" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>Editora</ion-label>
+    <ion-input type="text" [(ngModel)]="referencia.editora" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>Volume</ion-label>
+    <ion-input type="number" [(ngModel)]="referencia.volume" ></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating>Numero</ion-label>
+    <ion-input type="number" [(ngModel)]="referencia.numero" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Mês</ion-label>
+    <ion-input type="number" [(ngModel)]="referencia.mes" ></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label floating>Ano</ion-label>
+      <ion-input type="number" [(ngModel)]="referencia.ano" ></ion-input>
+    </ion-item>
+  <br />
+
+
+  <br />
+
+    <button ion-button full (click)="gerarReferenciaRevistas()">Gerar</button><br />
+  </ion-list>
+
+  <ion-label stacked id="referencia" style="font-weight:bold;" >Referência</ion-label>
+
+  <div class="item-text-wrap">{{referenciaCompleta}}</div>
+
+</ion-content>

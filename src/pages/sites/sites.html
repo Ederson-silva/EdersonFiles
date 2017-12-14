@@ -1,0 +1,68 @@
+<!--
+  Generated template for the SitesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sites</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Título </ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.titulo" name="titulo"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating id="titulo">Endereço URL </ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.url" name="url"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating id="autor">Autor nome </ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.autorNome" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating id="sobrenome">Sobrenome </ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.autorSobre" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating id="autor2">Autor 2 Nome </ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.autor2Nome" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating id="autor2sobre">Autor 2 Sobrenome </ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.autor2Sobre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating id="data">Data de acesso(11 dez. 2017)</ion-label>
+      <ion-input type="text" [(ngModel)]="referencia.data"></ion-input>
+    </ion-item>
+
+
+    <br />
+
+
+
+    <button ion-button full (click)="gerarReferencia()">Gerar</button><br />
+
+
+  </ion-list>
+
+  <ion-label stacked id="referencia" >Referência</ion-label>
+  <span>{{referenciaCompleta}}</span>
+
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
